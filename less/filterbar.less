@@ -1,0 +1,228 @@
+.filter-bar-top {
+  background: #fff;
+  border: 1px solid #dbdfe2;
+  color: #444;
+  padding: 20px;
+  position: relative;
+  .border-top-radius(6px);
+  .font-normal(14px);
+}
+
+.filter-bar-bottom {
+  background: #f8f9fb;
+  border: 1px solid #dbdfe2;
+  border-top: 0;
+  padding: 3px 20px 15px 20px;
+  .border-bottom-radius(6px);
+  .clearfix();
+
+  .no-filters {
+    color: #999;
+    margin: 26px 0 14px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    font-style: italic;
+    text-shadow: 0 1px white;
+    height: 12px;
+  }
+}
+
+.filter-link {
+  color: #00a3e6;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 24px;
+}
+.filter-link:hover {
+  text-decoration: underline;
+}
+
+.filter-block {
+  background: #fff;
+  border: 1px solid #c2c2c2;
+  color: #747677;
+  cursor: pointer;
+  float: left;
+  font-size: 13px;
+  margin: 12px 12px 0 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.filter-block-label {
+  display: inline-block;
+  .font-light(13px);
+  margin-right: 6px;
+}
+
+.filter-block-value {
+  display: inline-block;
+  .font-bold(13px);
+  margin-right: 10px;
+}
+
+.filter-block-remove {
+  color: #888888;
+  font-size: 12px;
+}
+
+.filter-box {
+  background: #fff;
+  border: 1px solid #00a3e6;
+  color: #868686;
+  font-size: 14px;
+  padding: 8px;
+  position: absolute;
+  top: 51px;
+  z-index: 5;
+
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  // this is so checked icons don't "push" the text to the right
+  // the checked icons are slightly wider than non-checked
+  i {
+    display: inline-block;
+    width: 15px;
+  }
+
+  // typeahead style based on examples page
+  // http://twitter.github.io/typeahead.js/examples/
+  .tt-hint {
+    color: #999
+  }
+
+  .tt-dropdown-menu {
+    color: #333;
+    margin-top: 2px;
+    padding: 8px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+
+  .tt-suggestion {
+    padding: 3px 20px;
+    font-size: 14px;
+    line-height: 20px;
+
+    .airport-code {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #0097cf;
+
+  }
+
+  .tt-suggestion p {
+    margin: 0;
+  }
+
+  .filter-autocomplete-input, .tt-hint {
+    text-transform: uppercase;
+  }
+}
+
+li.filter-option {
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 8px;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #00a3e6;
+    color: #fff;
+  }
+
+  i.icon-check {
+    display: none;
+  }
+
+  &.checked {
+    background: #00a3e6;
+    color: #fff;
+
+    i.icon-check {
+      display: inline-block;
+    }
+
+    i.icon-check-empty {
+      display: none;
+    }
+  }
+}
+
+.filter-box:after, .filter-box:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.filter-box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 6px;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.filter-box:before {
+  border-color: rgba(0, 163, 230, 0);
+  border-bottom-color: #00a3e6;
+  border-width: 7px;
+  left: 50%;
+  margin-left: -7px;
+}
+
+.filter-text-input {
+  .box-sizing(border-box);
+  width: 100%;
+}
+
+.filter-daterange-col {
+  float: left;
+  margin: 10px;
+  width: 275px;
+
+  .datepicker-value {
+    margin-left: 10px;
+  }
+
+  .datepicker {
+    margin-top: 10px;
+  }
+}
+
+.filter-daterange-label {
+  width: 100%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  .font-bold(13px);
+  color: #494a4b;
+}
+
+.filter-daterange-start .datepicker-value {
+  width: 227px;
+}
+
+.filter-daterange-end .datepicker-value {
+  width: 234px;
+}
